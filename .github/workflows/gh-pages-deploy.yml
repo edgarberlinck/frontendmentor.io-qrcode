@@ -52,7 +52,7 @@ jobs:
         path: /tmp/build
 
   deploy:
-    needs: upload
+    needs: build
     permissions:
       contents: read
       pages: write
