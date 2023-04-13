@@ -53,8 +53,8 @@ jobs:
         # Path of the directory containing the static assets.
         path: /tmp/build
      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+       id: deployment
+       uses: actions/deploy-pages@v2
     
 
       
