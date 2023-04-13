@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [19.x.x]
@@ -52,9 +50,9 @@ jobs:
         name: github-pages.tar
         # Path of the directory containing the static assets.
         path: /tmp/build
-     - name: Deploy to GitHub Pages
-       id: deployment
-       uses: actions/deploy-pages@v2
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
     
 
       
