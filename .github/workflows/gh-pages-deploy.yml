@@ -43,7 +43,8 @@ jobs:
       run: pnpm install --frozen-lockfile
     - name: Build
       run: pnpm build --outDir "/tmp/build" --emptyOutDir
-    - uses: actions/checkout@master
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
@@ -51,7 +52,9 @@ jobs:
         name: github-pages.tar
         # Path of the directory containing the static assets.
         path: /tmp/build
-
+     - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
     
 
       
