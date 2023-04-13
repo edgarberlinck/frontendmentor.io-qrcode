@@ -40,7 +40,7 @@ jobs:
     - name: Install Deps
       run: pnpm install --frozen-lockfile
     - name: Build
-      run: pnpm build --outDir "/tmp/build" --emptyOutDir
+      run: pnpm build --base=frontendmentor.io-qrcode/ --outDir "/tmp/build" --emptyOutDir
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
