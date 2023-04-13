@@ -1,12 +1,12 @@
 {
   "name": "qr-code-challenge",
+  "homepage": "https://edgarberlinck.github.io/frontendmentor.io-qrcode",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://edgarberlinck.github.io/frontendmentor.io-qrcode",
   "scripts": {
     "predeploy": "pnpm run build",
-    "gh-deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build --outDir './build' --emptyOutDir",
     "preview": "vite preview"
