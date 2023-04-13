@@ -41,11 +41,6 @@ jobs:
       run: pnpm install --frozen-lockfile
     - name: Build
       run: pnpm build --outDir "/tmp/build" --emptyOutDir
-
-  upload:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
     - name: Setup Pages
       uses: actions/configure-pages@v3
     - name: Upload GitHub Pages artifact
